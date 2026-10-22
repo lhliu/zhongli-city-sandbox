@@ -7,15 +7,13 @@ compatibility_date = "2026-10-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "zhongli-sandbox"
-# 在 Cloudflare 建立 D1 後填入實際 ID（見 README「部署」）
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "55d6b876-8a91-45e3-8bf0-5e18d0113c19"
 migrations_dir = "migrations"
 
 [[r2_buckets]]
 binding = "ASSETS_BUCKET"
 bucket_name = "zhongli-sandbox-assets"
 
-[vars]
-# Cloudflare Access 設定；未設定時正式環境 API 一律拒絕（fail closed）
-ACCESS_TEAM_DOMAIN = ""
-ACCESS_AUD = ""
+# Cloudflare Access：ACCESS_TEAM_DOMAIN、ACCESS_AUD 在 Pages 後台以 Secret 設定
+# （wrangler.toml 存在時，Pages 後台的一般變數無法編輯，但 Secret 可以）。
+# 未設定時正式環境 API 一律拒絕（fail closed）。
