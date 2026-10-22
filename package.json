@@ -17,6 +17,7 @@
     "@react-three/fiber": "9.8.2",
     "@turf/boolean-within": "7.4.0",
     "@turf/helpers": "7.4.0",
+    "@turf/intersect": "7.4.0",
     "@turf/kinks": "7.4.0",
     "@turf/union": "7.4.0",
     "hono": "4.13.13",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "5.20261021.1",
+    "@playwright/test": "1.64.1",
     "@types/geojson": "7946.0.16",
     "@types/papaparse": "5.5.2",
     "@types/react": "19.3.0",
