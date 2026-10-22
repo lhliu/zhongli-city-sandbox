@@ -1,0 +1,21 @@
+# Cloudflare Pages 專案設定（GitHub 自動部署）
+# 部署憑證不放在 repo 或容器內；綁定由 Pages 讀取此檔。
+name = "zhongli-city-sandbox"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "zhongli-sandbox"
+# 在 Cloudflare 建立 D1 後填入實際 ID（見 README「部署」）
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "ASSETS_BUCKET"
+bucket_name = "zhongli-sandbox-assets"
+
+[vars]
+# Cloudflare Access 設定；未設定時正式環境 API 一律拒絕（fail closed）
+ACCESS_TEAM_DOMAIN = ""
+ACCESS_AUD = ""
